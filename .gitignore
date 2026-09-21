@@ -1,0 +1,36 @@
+# Build outputs
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# Benchmark and runtime outputs
+runs/
+*.csv
+*.summary.txt
+*.metadata.txt
+perf_analysis.html
+
+# Object files and binaries
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+
+# Python/cache/editor noise
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
