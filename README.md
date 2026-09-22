@@ -1,4 +1,4 @@
-# Low-Latency Trading System：源码分析与可复现性能基准
+# Low-Latency Trading System
 
 这是一个基于现代 C++20 的教学型低延迟交易系统，包含交易所撮合、订单接入、增量行情、快照恢复、
 交易策略、风控和订单管理等组件。本仓库在原始教学代码基础上，重点扩展了**性能测量正确性、可复现
@@ -6,19 +6,6 @@ benchmark、非阻塞 TCP 稳健性和源码级技术文档**。
 
 > 本项目用于低延迟系统学习和性能工程实验，不是生产级交易所，也不连接真实资金账户。README 中
 > 的延迟数据来自单机阿里云 KVM 环境；除特别说明外，不代表物理网络或真实交易所延迟。
-
-## 面试展示入口
-
-建议先从以下路径讲起：
-
-1. `exchange/matcher/`：撮合引擎、订单簿和价格优先/同价 FIFO 逻辑。
-2. `exchange/order_server/`：订单接入、client request 校验和 FIFO sequencing。
-3. `exchange/market_data/`：增量行情发布和 snapshot 恢复链路。
-4. `trading/strategy/`：本地订单簿、策略、风控、订单管理和 TradeEngine。
-5. `benchmarks/`：可复现实验、measurement boundary 和性能报告。
-
-本仓库不是从零生产交易系统，而是在开源教学项目上完成低延迟工程化改造、测量框架和系统性复盘。
-面试中建议明确区分“上游基础架构”和“个人新增的 benchmark、修复、文档与分析”。
 
 ## 项目亮点
 
